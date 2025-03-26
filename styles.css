@@ -158,6 +158,37 @@ h1 {
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.05);
 }
 
+.site-header {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: transparent;
+    text-align: left;
+}
+
+.site-header h2 {
+    font-size: 20px;
+    color: var(--accent-color);
+}
+
+.share-link {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.share-link a {
+    text-decoration: none;
+    color: var(--accent-color);
+    border-bottom: 1px dashed var(--accent-color);
+    padding-bottom: 2px;
+    transition: color 0.2s ease;
+}
+
+.share-link a:hover {
+    color: var(--highlight-color);
+}
+
+
 /* Responsive Styles */
 @media (max-width: 900px) {
     .container {
