@@ -51,7 +51,9 @@ body {
     height: auto;
     border-radius: var(--border-radius);
     display: block;
+    no longer using this sample pack image on the page.
 }
+
 
 .sample-pack-label {
     position: absolute;
@@ -188,6 +190,84 @@ h1 {
     color: var(--highlight-color);
 }
 
+/* === Grid Section for Additional Tabs === */
+.tabs-grid-section {
+    max-width: 1440px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    font-size: 24px;
+    margin-bottom: 30px;
+    color: var(--accent-color);
+    text-align: left;
+}
+
+.tabs-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.tab-card {
+    background-color: var(--light-bg);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    text-align: center;
+    padding: 15px;
+}
+
+.tab-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.tab-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+    margin-bottom: 10px;
+}
+
+
+.tab-card h3 {
+    font-size: 18px;
+    color: var(--accent-color);
+    margin: 10px 0 5px;
+}
+
+.tab-card p {
+    font-size: 16px;
+    color: var(--highlight-color);
+    font-weight: bold;
+}
+
+.paypal-button {
+    display: inline-block;
+    padding: 14px 20px;
+    background-color: #ffc439;
+    color: #1a1a1a;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    border: none;
+    font-size: 16px;
+    transition: background-color 0.2s ease;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.paypal-button:hover {
+    background-color: #ffb347;
+    color: black;
+}
+
+
 
 /* Responsive Styles */
 @media (max-width: 900px) {
@@ -201,12 +281,13 @@ h1 {
         width: 100%;
     }
 
+    /* no longer using this sample pack image on the page. 
     .sample-pack-label {
         font-size: 20px;
         bottom: 10px;
         left: 10px;
         padding: 8px 16px;
-    }
+    }*/
 
     h1 {
         font-size: 22px;
@@ -220,6 +301,11 @@ h1 {
     .shop-pay {
         width: 100%;
     }
+
+    .tabs-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
 }
 
 @media (max-width: 600px) {
@@ -232,7 +318,7 @@ h1 {
         gap: 20px;
     }
 
-    .sample-pack-label {
+    no longer using this sample pack image on the page. .sample-pack-label {
         font-size: 18px;
     }
 
@@ -244,4 +330,9 @@ h1 {
     .note {
         font-size: 14px;
     }
+
+    .tabs-grid {
+        grid-template-columns: 1fr;
+    }
+
 }
