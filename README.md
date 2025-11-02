@@ -1,10 +1,10 @@
 # Guitar Sample Store - Landing Page
 
-A modern, responsive landing page for selling guitar sample packs. Built as a portfolio project showcasing clean design, SEO best practices, and modern web development techniques.
+A modern, responsive landing page for selling guitar sample packs. Developed by **Robert Cushman** as a portfolio project for student **Brian Camacho** (guitarist and web developer), showcasing clean design, SEO best practices, and modern web development techniques.
 
 ## 🎸 Project Overview
 
-This is a single-page e-commerce landing page for "Sylvester" guitar samples by Brian Camacho. The page features:
+This is a single-page e-commerce landing page for "Sylvester" guitar samples by Brian Camacho (guitarist, producer, and sample maker). The page features:
 
 - **Product showcase** with audio preview
 - **PayPal integration** for payments
@@ -125,11 +125,14 @@ Potential improvements for a production version:
 
 This is a student portfolio project. Feel free to use as a reference or template.
 
-## 👤 Author
+## 👥 Credits
 
-**Brian Camacho | (along with Robert Cushman**  
-Guitarist • Producer • Sample Maker
+**Co-Developers**: Robert Cushman & Brian Camacho
+_Web Developer & Portfolio Architect_
+
+**Student/Client**: Brian Camacho  
+_Guitarist • Producer • Sample Maker • Web Developer_
 
 ---
 
-_Built with attention to detail, modern web standards, and best practices._
+_Developed by Robert Cushman with attention to detail, modern web standards, and best practices._

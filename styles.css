@@ -652,16 +652,17 @@ body::before {
 /* === Footer === */
 .site-footer {
     margin-top: auto;
-    padding: 24px 0 0;
+    padding: 24px 24px 0;
+    /* ✅ Match standard content padding */
     background: transparent;
-    /* panel styling moves to .footer-inner for fixed width */
     flex-shrink: 0;
 }
 
 .footer-inner {
     max-width: 1440px;
     margin: 0 auto;
-    padding: 24px 20px 12px;
+    padding: 24px 24px 12px;
+    /* ✅ Match standard content padding */
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: 24px;
@@ -670,9 +671,11 @@ body::before {
     background: rgba(255, 255, 255, 0.9);
     backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(6px);
-    border-radius: 16px 16px 0 0;
+    border-radius: 16px 16px 16px 16px;
+    /* ✅ Rounded corners on all sides */
     box-shadow: 0 -8px 30px rgba(0, 0, 0, .08);
-    border-top: 1px solid rgba(0, 0, 0, 0.12);
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    /* ✅ Border all around instead of just top */
 }
 
 .footer-brand h3 {
@@ -711,14 +714,15 @@ body::before {
 }
 
 .footer-bottom {
-    max-width: 1440px;
-    margin: 0 auto;
-    padding: 12px 20px 24px;
+    padding: 12px 24px 24px;
+    /* ✅ Match standard content padding */
     display: flex;
     gap: 10px;
     align-items: center;
     justify-content: center;
     color: #2a2a2a;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    margin-top: 12px;
     font-size: 14px;
 }
 
