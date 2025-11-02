@@ -19,7 +19,7 @@
     <meta property="og:title" content="Sylvester's Guitar Tab Store" />
     <meta property="og:description"
         content="High-quality WAV guitar samples by Brian Camacho — ready to remix or record with." />
-    <meta property="og:image" content="images/homepage-img1.jpg" />
+    <meta property="og:image" content="images/og-sylvester.jpg" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://yourcustomdomain.com" />
 
@@ -34,8 +34,19 @@
     <header class="site-header">
         <h2>Brian Camacho</h2>
     </header>
+    <section class="hero-background reveal">
+        <div class="hero-content">
+            <h1>“Sylvester” Guitar Samples</h1>
+            <p>High‑quality WAVs with both TONE and DRY stems for maximum flexibility. Crafted by Brian Camacho — ready
+                to sample, remix, and record with.</p>
+            <div class="hero-cta">
+                <a href="#buy" class="button-primary">Get the pack</a>
+                <a href="#more-tabs" class="button-secondary">Explore more tabs</a>
+            </div>
+        </div>
+    </section>
 
-    <div class="container">
+    <div class="container reveal" id="buy">
         <div class="product-image">
             <img src="images/homepage-img1.jpg" alt="Sylvester Sample Pack Cover" />
             <!--<div class="sample-pack-label">SAMPLE<br>PACK</div>-->
@@ -44,24 +55,10 @@
         <div class="product-info">
             <h1>"Sylvester" Guitar Samples</h1>
             <p class="price">$8.00 USD</p>
-
-            <div class="quantity-controls">
-                <button>-</button>
-                <span>1</span>
-                <button>+</button>
-            </div>
-
-            <button class="add-to-cart">Add to cart</button>
-            <!--<button class="shop-pay">Buy with Shop Pay</button>-->
-
-            <a class="paypal-button" href="https://paypal.me/Sylvester39376/8" target="_blank"
-                rel="noopener noreferrer">
-                Pay with PayPal
-            </a>
-
-
-
-            <a class="more-options" href="#">More payment options</a>
+            <audio controls preload="metadata" class="audio-preview">
+                <source src="audio/sylvester-preview.mp3" type="audio/mpeg" />
+                Your browser does not support the audio element.
+            </audio>
 
             <p class="description">
                 This download pack contains original WAV files from the “Sylvester” guitar riff — includes both TONE and
@@ -75,6 +72,14 @@
                 manually.
             </p>
 
+            <a class="paypal-button" href="https://paypal.me/Sylvester39376/8" target="_blank"
+                rel="noopener noreferrer">
+                Pay with PayPal
+            </a>
+
+            <!-- PayPal Hosted Button temporarily removed to avoid wrong product title -->
+            <!-- <div id="paypal-container-VN4YVKTUS4XRA"></div> -->
+
             <div class="share-link">
                 🔗 <a href="#">Share this product</a>
             </div>
@@ -82,35 +87,35 @@
     </div>
 
     <!-- Additional Tab Offerings Section -->
-    <section class="tabs-grid-section">
+    <section class="tabs-grid-section reveal" id="more-tabs">
         <h2 class="section-title">More Guitar Tabs</h2>
         <div class="tabs-grid">
-            <div class="tab-card">
+            <div class="tab-card reveal">
                 <img src="images/homepage-img1.jpg" alt="Guitar Tab 1">
                 <h3>Sunset Jam</h3>
                 <p>$5.00 USD</p>
             </div>
-            <div class="tab-card">
+            <div class="tab-card reveal">
                 <img src="images/homepage-img2.jpg" alt="Guitar Tab 2">
                 <h3>Echo Drive</h3>
                 <p>$6.00 USD</p>
             </div>
-            <div class="tab-card">
+            <div class="tab-card reveal">
                 <img src="images/homepage-img3.jpg" alt="Guitar Tab 3">
                 <h3>Pulse Shift</h3>
                 <p>$7.00 USD</p>
             </div>
-            <div class="tab-card">
+            <div class="tab-card reveal">
                 <img src="images/homepage-img4.jpg" alt="Guitar Tab 4">
                 <h3>Lo-Fi Cloud</h3>
                 <p>$5.00 USD</p>
             </div>
-            <div class="tab-card">
+            <div class="tab-card reveal">
                 <img src="images/homepage-img5.jpg" alt="Guitar Tab 5">
                 <h3>Sludge City</h3>
                 <p>$6.00 USD</p>
             </div>
-            <div class="tab-card">
+            <div class="tab-card reveal">
                 <img src="images/homepage-img6.jpg" alt="Guitar Tab 6">
                 <h3>Jazz Drift</h3>
                 <p>$8.00 USD</p>
@@ -120,6 +125,44 @@
 
 
     <script src="script.js"></script>
+    <!-- PayPal Hosted Buttons removed; will re-add with correct hostedButtonId for 'Entire Set of Guitar Samples' -->
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <h3>Brian Camacho</h3>
+                <p class="tagline">Guitarist • Producer • Sample Maker</p>
+            </div>
+            <nav class="footer-links">
+                <div class="link-column">
+                    <h4>Explore</h4>
+                    <a href="#buy">Sylvester Pack</a>
+                    <a href="#more-tabs">More Tabs</a>
+                    <a href="#">Blog (soon)</a>
+                </div>
+                <div class="link-column">
+                    <h4>Support</h4>
+                    <a href="#">Downloads</a>
+                    <a href="#">Licensing</a>
+                    <a href="#">Contact</a>
+                </div>
+                <div class="link-column">
+                    <h4>Social</h4>
+                    <a href="#" aria-label="Instagram">📷 Instagram</a>
+                    <a href="#" aria-label="YouTube">▶️ YouTube</a>
+                    <a href="#" aria-label="X">✖️ X</a>
+                </div>
+            </nav>
+        </div>
+        <div class="footer-bottom">
+            <span>© <span id="year"></span> Brian Camacho</span>
+            <span class="dot">•</span>
+            <a href="#">Privacy</a>
+            <span class="dot">•</span>
+            <a href="#">Terms</a>
+        </div>
+    </footer>
+
 </body>
 
 </html>
