@@ -53,3 +53,51 @@ document.querySelectorAll('.reveal').forEach(el => io.observe(el));
     const y = document.getElementById('year');
     if (y) y.textContent = new Date().getFullYear();
 })();
+
+// Share functionality
+(function initShare() {
+    const shareLinks = document.querySelectorAll('.share-link a');
+    
+    shareLinks.forEach(link => {
+        link.addEventListener('click', async (e) => {
+            e.preventDefault();
+            
+            const shareData = {
+                title: 'Sylvester Guitar Samples - Brian Camacho',
+                text: 'Check out this premium guitar sample pack with TONE & DRY stems!',
+                url: window.location.href
+            };
+            
+            // Use native Web Share API if available (mobile)
+            if (navigator.share) {
+                try {
+                    await navigator.share(shareData);
+                } catch (err) {
+                    if (err.name !== 'AbortError') {
+                        console.log('Share failed:', err);
+                        fallbackShare();
+                    }
+                }
+            } else {
+                // Fallback: copy to clipboard
+                fallbackShare();
+            }
+        });
+    });
+    
+    function fallbackShare() {
+        const url = window.location.href;
+        navigator.clipboard.writeText(url).then(() => {
+            // Show temporary feedback
+            const link = document.querySelector('.share-link a');
+            const originalText = link.innerHTML;
+            link.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Link copied!';
+            setTimeout(() => {
+                link.innerHTML = originalText;
+            }, 2000);
+        }).catch(err => {
+            console.error('Failed to copy:', err);
+            alert('Share URL: ' + url);
+        });
+    }
+})();

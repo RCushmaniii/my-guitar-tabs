@@ -165,9 +165,31 @@ body {
     /* ✅ Max width for desktop */
     margin: 0 auto;
     gap: 40px;
-    padding: 40px 20px;
+    padding: 40px 24px;
     flex-wrap: wrap;
     /* Helps with responsiveness */
+    align-items: flex-start;
+    /* ✅ Align items to top for better layout */
+}
+
+.product-image {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.product-header h1 {
+    font-size: 26px;
+    color: var(--accent-color);
+    margin: 0;
+}
+
+.product-header .price {
+    font-weight: bold;
+    font-size: 20px;
+    color: var(--accent-color);
+    margin: 8px 0 0 0;
 }
 
 .product-image img {
@@ -177,9 +199,8 @@ body {
     border-radius: 8px;
     display: block;
     max-width: 100%;
-    /* Ensures it doesn’t overflow */
+    /* Ensures it doesn't overflow */
 }
-
 
 .sample-pack-label {
     position: absolute;
@@ -203,6 +224,8 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     gap: 20px;
+    padding-top: 66px;
+    /* ✅ Align with image by offsetting title+price height */
 }
 
 h1 {
@@ -277,6 +300,24 @@ h1 {
 }
 
 /* Text blocks */
+.product-details {
+    font-size: 15px;
+    background-color: var(--light-bg);
+    padding: 16px 18px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.05);
+    line-height: 1.6;
+}
+
+.product-details p {
+    margin: 0;
+}
+
+.product-details p + p {
+    margin-top: 14px;
+}
+
+/* Legacy styles for backwards compatibility */
 .description,
 .note {
     font-size: 15px;
@@ -302,14 +343,21 @@ h1 {
 .share-link {
     margin-top: 20px;
     font-size: 14px;
+    text-align: center;
+    padding: 12px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: var(--border-radius);
+    border: 1px solid rgba(64, 61, 57, 0.15);
 }
 
 .share-link a {
     text-decoration: none;
     color: var(--accent-color);
-    border-bottom: 1px dashed var(--accent-color);
-    padding-bottom: 2px;
+    font-weight: 500;
     transition: color 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
 }
 
 .share-link a:hover {
@@ -319,7 +367,7 @@ h1 {
 /* === Grid Section for Additional Tabs === */
 .tabs-grid-section {
     max-width: 1440px;
-    margin: 60px auto;
+    margin: 1px auto;
     padding: 24px 24px;
 }
 
@@ -333,7 +381,7 @@ h1 {
 .tabs-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 36px;
+    gap: 36px
 }
 
 .tab-card {
@@ -373,24 +421,34 @@ h1 {
 }
 
 .paypal-button {
-    display: inline-block;
-    padding: 14px 20px;
-    background-color: #ffc439;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 16px 20px;
+    background: linear-gradient(to bottom, #ffc439 0%, #f7b731 100%);
     color: #1a1a1a;
-    font-weight: bold;
+    font-weight: 600;
     text-align: center;
     text-decoration: none;
     border-radius: var(--border-radius);
     border: none;
     font-size: 16px;
-    transition: background-color 0.2s ease;
+    transition: all 0.2s ease;
     margin-top: 10px;
     width: 100%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
 .paypal-button:hover {
-    background-color: #ffb347;
-    color: black;
+    background: linear-gradient(to bottom, #ffb347 0%, #ffa726 100%);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.paypal-button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
 
 
@@ -405,6 +463,11 @@ h1 {
     .product-image,
     .product-info {
         width: 100%;
+    }
+
+    .product-info {
+        padding-top: 40px;
+        /* ✅ Remove top padding on mobile */
     }
 
 
@@ -657,11 +720,6 @@ body::before {
     justify-content: center;
     color: #2a2a2a;
     font-size: 14px;
-    background: rgba(255, 255, 255, 0.9);
-    backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(6px);
-    border-top: 1px solid rgba(0, 0, 0, 0.08);
-    border-radius: 0 0 16px 16px;
 }
 
 .footer-bottom a {
@@ -687,11 +745,6 @@ body::before {
     .footer-brand .tagline,
     .footer-bottom {
         color: #d9d9d9;
-    }
-
-    .footer-bottom {
-        background: rgba(0, 0, 0, 0.6);
-        border-top: 1px solid rgba(255, 255, 255, 0.08);
     }
 
     .footer-links a {
@@ -724,13 +777,19 @@ body::before {
     .section-title,
     .site-header h2,
     h1,
-    .hero-copy h1 {
+    .hero-copy h1,
+    .product-header h1 {
+        color: #f2f2f2;
+    }
+
+    .product-header .price {
         color: #f2f2f2;
     }
 
     .description,
     .note,
-    .tab-card {
+    .tab-card,
+    .product-details {
         background: rgba(255, 255, 255, 0.06);
         box-shadow: 0 2px 10px rgba(0, 0, 0, .25);
     }
@@ -744,6 +803,19 @@ body::before {
     .button-secondary {
         color: #eaeaea;
         border-color: #eaeaea;
+    }
+
+    .share-link {
+        background-color: rgba(255, 255, 255, 0.08);
+        border-color: rgba(255, 255, 255, 0.15);
+    }
+
+    .share-link a {
+        color: #eaeaea;
+    }
+
+    .share-link a:hover {
+        color: #ffc439;
     }
 }
 

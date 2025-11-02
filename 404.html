@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found | Brian Camacho</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .error-container {
+            min-height: 80vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 40px 20px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .error-code {
+            font-size: 120px;
+            font-weight: bold;
+            color: var(--accent-color);
+            line-height: 1;
+            margin: 0;
+        }
+        
+        .error-message {
+            font-size: 24px;
+            color: var(--dark-text);
+            margin: 20px 0;
+        }
+        
+        .error-description {
+            font-size: 16px;
+            color: var(--dark-text);
+            opacity: 0.8;
+            margin-bottom: 30px;
+        }
+        
+        @media (max-width: 600px) {
+            .error-code {
+                font-size: 80px;
+            }
+            .error-message {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <h2>Brian Camacho</h2>
+    </header>
+    
+    <div class="error-container">
+        <h1 class="error-code">404</h1>
+        <h2 class="error-message">Page Not Found</h2>
+        <p class="error-description">
+            Sorry, the page you're looking for doesn't exist or has been moved.
+        </p>
+        <a href="/" class="button-primary">Back to Home</a>
+    </div>
+    
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <h3>Brian Camacho</h3>
+                <p class="tagline">Guitarist • Producer • Sample Maker</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>© <span id="year"></span> Brian Camacho</span>
+        </div>
+    </footer>
+    
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
