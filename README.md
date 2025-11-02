@@ -16,6 +16,7 @@ This is a single-page e-commerce landing page for "Sylvester" guitar samples by 
 ## 🚀 Features
 
 ### Design & UX
+
 - Clean, modern aesthetic with beige/brown color palette
 - Smooth scroll animations using Intersection Observer
 - Subtle parallax effect on hero section
@@ -23,6 +24,7 @@ This is a single-page e-commerce landing page for "Sylvester" guitar samples by 
 - Mobile-optimized navigation and layout
 
 ### Technical
+
 - **Semantic HTML5** for accessibility and SEO
 - **CSS Grid & Flexbox** for modern layouts
 - **Vanilla JavaScript** (no framework dependencies)
@@ -31,6 +33,7 @@ This is a single-page e-commerce landing page for "Sylvester" guitar samples by 
 - **Open Graph & Twitter Cards** for social sharing
 
 ### SEO
+
 - Comprehensive meta tags (description, keywords, author)
 - Open Graph tags for Facebook/LinkedIn
 - Twitter Card tags for Twitter sharing
@@ -67,6 +70,7 @@ my-guitar-tabs/
 ## 🎨 Design Principles
 
 Following core coding principles:
+
 - **SRP** (Single Responsibility Principle)
 - **DRY** (Don't Repeat Yourself)
 - **SoC** (Separation of Concerns)
@@ -76,11 +80,13 @@ Following core coding principles:
 ## 🔧 Setup & Deployment
 
 ### Local Development
+
 1. Clone or download the repository
 2. Open `index.html` in a modern browser
 3. No build process required - pure HTML/CSS/JS
 
 ### Before Going Live
+
 - [ ] Replace `https://yourcustomdomain.com` with actual domain
 - [ ] Update social media links in footer
 - [ ] Add real product images for "More Tabs" section
@@ -94,6 +100,7 @@ Following core coding principles:
 ## 🎯 Portfolio Highlights
 
 This project demonstrates:
+
 - ✅ Modern CSS techniques (Grid, Flexbox, custom properties)
 - ✅ Vanilla JavaScript (no jQuery or heavy frameworks)
 - ✅ SEO best practices and structured data
@@ -105,6 +112,7 @@ This project demonstrates:
 ## 📈 Future Enhancements
 
 Potential improvements for a production version:
+
 - Shopping cart functionality
 - Multiple product pages
 - Email delivery automation
@@ -119,9 +127,9 @@ This is a student portfolio project. Feel free to use as a reference or template
 
 ## 👤 Author
 
-**Brian Camacho**  
+**Brian Camacho | (along with Robert Cushman**  
 Guitarist • Producer • Sample Maker
 
 ---
 
-*Built with attention to detail, modern web standards, and best practices.*
+_Built with attention to detail, modern web standards, and best practices._
