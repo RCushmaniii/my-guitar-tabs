@@ -5,7 +5,8 @@
 
 A modern, responsive landing page for selling guitar sample packs. Developed by **Robert Cushman** as a portfolio project for student **Brian Camacho** (guitarist and web developer), showcasing clean design, SEO best practices, and modern web development techniques.
 
-**🌐 Live Site**: [https://guitar-sample-store.vercel.app/](https://guitar-sample-store.vercel.app/)
+**🌐 Live Site**: [https://guitar-sample-store.vercel.app/](https://guitar-sample-store.vercel.app/)  
+**Last Updated**: November 3, 2025
 
 ## 📋 Project Overview
 
