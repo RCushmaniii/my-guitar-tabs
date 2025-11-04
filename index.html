@@ -17,6 +17,9 @@
     
     <!-- Preconnect for faster resource loading -->
     <link rel="preconnect" href="https://guitar-sample-store.vercel.app" crossorigin />
+    
+    <!-- Preload critical hero background image for LCP -->
+    <link rel="preload" as="image" href="images/live-playing-electric-guitar.webp" fetchpriority="high" />
 
     <!-- Page Title -->
     <title>Sylvester Guitar Samples - Brian Camacho | Premium WAV Pack</title>
@@ -103,10 +106,11 @@
 
     <!-- ========== PRODUCT DETAILS SECTION ========== -->
     <!-- Main product showcase with image, audio preview, and purchase button -->
+    <main>
     <div class="container reveal" id="buy">
         <div class="product-image">
             <div class="product-header">
-                <h1>"Sylvester" Guitar Samples</h1>
+                <h2>"Sylvester" Guitar Samples</h2>
                 <p class="price">$8.00 USD</p>
             </div>
             <img src="images/live-playing-electric-guitar.webp" alt="Sylvester Sample Pack Cover" fetchpriority="high" width="372" height="222" />
@@ -114,7 +118,7 @@
         </div>
 
         <div class="product-info">
-            <audio controls preload="metadata" class="audio-preview">
+            <audio controls preload="metadata" class="audio-preview" style="width: 100%; height: 54px;">
                 <source src="audio/sylvester-preview.mp3" type="audio/mpeg" />
                 Your browser does not support the audio element.
             </audio>
@@ -196,6 +200,7 @@
             </div>
         </div>
     </section>
+    </main>
 
     <!-- ========== FOOTER ========== -->
     <!-- Site footer with navigation links and copyright information -->

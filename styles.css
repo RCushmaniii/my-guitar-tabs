@@ -179,7 +179,8 @@ body {
     gap: 20px;
 }
 
-.product-header h1 {
+.product-header h1,
+.product-header h2 {
     font-size: 26px;
     color: var(--accent-color);
     margin: 0;
@@ -782,7 +783,8 @@ body::before {
     .site-header h2,
     h1,
     .hero-copy h1,
-    .product-header h1 {
+    .product-header h1,
+    .product-header h2 {
         color: #f2f2f2;
     }
 
