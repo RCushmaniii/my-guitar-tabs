@@ -8,6 +8,22 @@ A modern, responsive landing page for selling guitar sample packs. Developed by 
 **🌐 Live Site**: [https://guitar-sample-store.vercel.app/](https://guitar-sample-store.vercel.app/)  
 **Last Updated**: November 3, 2025
 
+## 🏆 Performance Scores
+
+Perfect scores across all metrics on both mobile and desktop!
+
+### Desktop Performance
+![Desktop PageSpeed Report](images/performance/page_speed_report_desktop.jpg)
+
+### Mobile Performance
+![Mobile PageSpeed Report](images/performance/page_speed_report_mobile.jpg)
+
+**Achieved:**
+- ✅ **100/100** Performance
+- ✅ **100/100** Accessibility
+- ✅ **100/100** Best Practices
+- ✅ **100/100** SEO
+
 ## 📋 Project Overview
 
 This is a single-page e-commerce landing page for "Sylvester" guitar samples by Brian Camacho (guitarist, producer, and sample maker). The page features:
