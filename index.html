@@ -57,8 +57,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png" />
 
     <!-- Styles -->
-    <link rel="stylesheet" href="styles.css" media="print" onload="this.media='all'" />
-    <noscript><link rel="stylesheet" href="styles.css"></noscript>
+    <link rel="stylesheet" href="styles.css" />
 
     <!-- ========== STRUCTURED DATA ========== -->
     <!-- JSON-LD for rich search results and product schema -->
@@ -92,9 +91,9 @@
 <body>
     <!-- ========== HERO SECTION ========== -->
     <!-- Main landing section with background image and CTA buttons -->
-    <section class="hero-background reveal">
+    <section class="hero-background reveal" aria-labelledby="hero-title">
         <div class="hero-content">
-            <h1>“Sylvester” Guitar Samples</h1>
+            <h1 id="hero-title">"Sylvester" Guitar Samples</h1>
             <p>High‑quality WAVs with both TONE and DRY stems for maximum flexibility. Crafted by Brian Camacho — ready
                 to sample, remix, and record with.</p>
             <div class="hero-cta">
@@ -118,7 +117,7 @@
         </div>
 
         <div class="product-info">
-            <audio controls preload="metadata" class="audio-preview" style="width: 100%; height: 54px;">
+            <audio controls preload="none" class="audio-preview" style="width: 100%; height: 54px;">
                 <source src="audio/sylvester-preview.mp3" type="audio/mpeg" />
                 Your browser does not support the audio element.
             </audio>
