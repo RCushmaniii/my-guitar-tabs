@@ -14,6 +14,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#b3ac98" />
+    
+    <!-- Preconnect for faster resource loading -->
+    <link rel="preconnect" href="https://guitar-sample-store.vercel.app" crossorigin />
 
     <!-- Page Title -->
     <title>Sylvester Guitar Samples - Brian Camacho | Premium WAV Pack</title>
@@ -51,7 +54,8 @@
     <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png" />
 
     <!-- Styles -->
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css" media="print" onload="this.media='all'" />
+    <noscript><link rel="stylesheet" href="styles.css"></noscript>
 
     <!-- ========== STRUCTURED DATA ========== -->
     <!-- JSON-LD for rich search results and product schema -->
@@ -105,7 +109,7 @@
                 <h1>"Sylvester" Guitar Samples</h1>
                 <p class="price">$8.00 USD</p>
             </div>
-            <img src="images/live-playing-electric-guitar.webp" alt="Sylvester Sample Pack Cover" />
+            <img src="images/live-playing-electric-guitar.webp" alt="Sylvester Sample Pack Cover" fetchpriority="high" width="372" height="222" />
             <!--<div class="sample-pack-label">SAMPLE<br>PACK</div>-->
         </div>
 
@@ -161,32 +165,32 @@
         <h2 class="section-title">More Guitar Tabs</h2>
         <div class="tabs-grid">
             <div class="tab-card reveal">
-                <img src="images/homepage-img1.jpg" alt="Guitar Tab 1">
+                <img src="images/homepage-img1.jpg" alt="Guitar Tab 1" loading="lazy" width="304" height="228">
                 <h3>Sunset Jam</h3>
                 <p>$5.00 USD</p>
             </div>
             <div class="tab-card reveal">
-                <img src="images/homepage-img2.jpg" alt="Guitar Tab 2">
+                <img src="images/homepage-img2.jpg" alt="Guitar Tab 2" loading="lazy" width="356" height="200">
                 <h3>Echo Drive</h3>
                 <p>$6.00 USD</p>
             </div>
             <div class="tab-card reveal">
-                <img src="images/homepage-img3.jpg" alt="Guitar Tab 3">
+                <img src="images/homepage-img3.jpg" alt="Guitar Tab 3" loading="lazy" width="356" height="200">
                 <h3>Pulse Shift</h3>
                 <p>$7.00 USD</p>
             </div>
             <div class="tab-card reveal">
-                <img src="images/homepage-img4.jpg" alt="Guitar Tab 4">
+                <img src="images/homepage-img4.jpg" alt="Guitar Tab 4" loading="lazy" width="380" height="200">
                 <h3>Lo-Fi Cloud</h3>
                 <p>$5.00 USD</p>
             </div>
             <div class="tab-card reveal">
-                <img src="images/homepage-img5.jpg" alt="Guitar Tab 5">
+                <img src="images/homepage-img5.jpg" alt="Guitar Tab 5" loading="lazy" width="304" height="203">
                 <h3>Sludge City</h3>
                 <p>$6.00 USD</p>
             </div>
             <div class="tab-card reveal">
-                <img src="images/homepage-img6.jpg" alt="Guitar Tab 6">
+                <img src="images/homepage-img6.jpg" alt="Guitar Tab 6" loading="lazy" width="304" height="202">
                 <h3>Jazz Drift</h3>
                 <p>$8.00 USD</p>
             </div>
