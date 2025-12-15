@@ -19,7 +19,7 @@
     <link rel="preconnect" href="https://guitar-sample-store.vercel.app" crossorigin />
     
     <!-- Preload critical hero background image for LCP -->
-    <link rel="preload" as="image" href="images/live-playing-electric-guitar.webp" fetchpriority="high" />
+    <link rel="preload" as="image" href="images/hero-sylvester.webp" fetchpriority="high" />
 
     <!-- Page Title -->
     <title>Sylvester Guitar Samples - Brian Camacho | Premium WAV Pack</title>
@@ -50,7 +50,6 @@
     <meta name="twitter:description"
         content="High-quality WAV guitar samples — includes TONE & DRY stems for maximum creative flexibility." />
     <meta name="twitter:image" content="https://guitar-sample-store.vercel.app/images/og-sylvester.jpg" />
-    <meta name="twitter:creator" content="@sam.krones" />
 
     <!-- Favicon -->
     <link rel="icon" href="images/favicon/favicon.ico" type="image/x-icon" />
@@ -89,9 +88,10 @@
 </head>
 
 <body>
+    <a class="skip-link" href="#main">Skip to content</a>
     <!-- ========== HERO SECTION ========== -->
     <!-- Main landing section with background image and CTA buttons -->
-    <section class="hero-background reveal" aria-labelledby="hero-title">
+    <section class="hero-background reveal parallax" aria-labelledby="hero-title">
         <div class="hero-content">
             <h1 id="hero-title">"Sylvester" Guitar Samples</h1>
             <p>High‑quality WAVs with both TONE and DRY stems for maximum flexibility. Crafted by Brian Camacho — ready
@@ -105,7 +105,7 @@
 
     <!-- ========== PRODUCT DETAILS SECTION ========== -->
     <!-- Main product showcase with image, audio preview, and purchase button -->
-    <main>
+    <main id="main">
     <div class="container reveal" id="buy">
         <div class="product-image">
             <div class="product-header">
@@ -130,8 +130,8 @@
                 </p>
                 <p>
                     All files will be delivered to your inbox shortly after purchase. If you don't see them, double-check
-                    your spam folder. Still nothing? Send me a DM on Instagram <strong>@sam.krones</strong> and I'll send it
-                    manually.
+                    your spam folder. Still nothing? Send a DM on Instagram <a href="https://instagram.com/sam.krones" target="_blank" rel="noopener noreferrer">@sam.krones</a>
+                    and we'll help you out.
                 </p>
             </div>
 
@@ -148,7 +148,7 @@
             <!-- PayPal Hosted Button (currently using direct link instead) -->
 
             <div class="share-link">
-                <a href="#">
+                <button type="button" class="share-button" aria-label="Share this product">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <circle cx="18" cy="5" r="3"></circle>
                         <circle cx="6" cy="12" r="3"></circle>
@@ -157,10 +157,67 @@
                         <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
                     </svg>
                     Share this product
-                </a>
+                </button>
             </div>
         </div>
     </div>
+
+    <section class="trust-section reveal" aria-labelledby="trust-title">
+        <div class="trust-inner">
+            <h2 class="section-title" id="trust-title">Buy with confidence</h2>
+            <div class="trust-grid">
+                <div class="trust-card">
+                    <h3>Instant digital delivery</h3>
+                    <p>Your download link is delivered to your email shortly after checkout.</p>
+                </div>
+                <div class="trust-card">
+                    <h3>Secure checkout</h3>
+                    <p>Payment is handled by PayPal. We never collect or store your payment details.</p>
+                </div>
+                <div class="trust-card">
+                    <h3>Use in any DAW</h3>
+                    <p>High-quality WAV files for easy drag-and-drop into any workflow.</p>
+                </div>
+            </div>
+
+            <div class="trust-split">
+                <div class="trust-panel">
+                    <h3>What’s included</h3>
+                    <ul class="included-list">
+                        <li>TONE stem (WAV)</li>
+                        <li>DRY stem (WAV)</li>
+                        <li>Bonus chord track(s) (WAV)</li>
+                        <li>Reference preview (MP3)</li>
+                    </ul>
+                </div>
+                <div class="trust-panel">
+                    <h3>Need help?</h3>
+                    <p>If your email provider delays delivery or the link expires, reach out on Instagram and we’ll make it right.</p>
+                    <p><a href="shell.html?page=contact" class="text-link">Contact options</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq-section reveal" aria-labelledby="faq-title">
+        <div class="trust-inner">
+            <h2 class="section-title" id="faq-title">FAQ</h2>
+            <div class="faq-list">
+                <details>
+                    <summary>How do I receive the files?</summary>
+                    <p>After purchase, you’ll receive an email with a download link. If you don’t see it within a few minutes, check spam/promotions.</p>
+                </details>
+                <details>
+                    <summary>Can I use these samples in commercial projects?</summary>
+                    <p>Yes — you can use the files in your music releases. See <a href="shell.html?page=licensing" class="text-link">Licensing</a> for details.</p>
+                </details>
+                <details>
+                    <summary>Do you offer refunds?</summary>
+                    <p>Because this is a digital download, refunds are handled case-by-case. If something goes wrong with delivery, we’ll help immediately.</p>
+                </details>
+            </div>
+        </div>
+    </section>
 
     <!-- ========== MORE PRODUCTS SECTION ========== -->
     <!-- Grid of additional guitar tab offerings in the "More Tabs" section -->
@@ -214,28 +271,26 @@
                     <h4>Explore</h4>
                     <a href="#buy">Sylvester Pack</a>
                     <a href="#more-tabs">More Tabs</a>
-                    <a href="#">Blog (soon)</a>
+                    <a href="shell.html?page=blog">Blog</a>
                 </div>
                 <div class="link-column">
                     <h4>Support</h4>
-                    <a href="#">Downloads</a>
-                    <a href="#">Licensing</a>
-                    <a href="#">Contact</a>
+                    <a href="shell.html?page=downloads">Downloads</a>
+                    <a href="shell.html?page=licensing">Licensing</a>
+                    <a href="shell.html?page=contact">Contact</a>
                 </div>
                 <div class="link-column">
                     <h4>Social</h4>
-                    <a href="#" aria-label="Instagram">📷 Instagram</a>
-                    <a href="#" aria-label="YouTube">▶️ YouTube</a>
-                    <a href="#" aria-label="X">✖️ X</a>
+                    <a href="https://instagram.com/sam.krones" target="_blank" rel="noopener noreferrer" aria-label="Instagram">Instagram</a>
                 </div>
             </nav>
         </div>
         <div class="footer-bottom">
             <span>© <span id="year"></span> Brian Camacho</span>
             <span class="dot">•</span>
-            <a href="#">Privacy</a>
+            <a href="shell.html?page=privacy">Privacy</a>
             <span class="dot">•</span>
-            <a href="#">Terms</a>
+            <a href="shell.html?page=terms">Terms</a>
         </div>
     </footer>
 

@@ -10,6 +10,8 @@ desktop.ini
 *.swo
 *~
 
+.windsurf/
+
 # Logs
 *.log
 npm-debug.log*

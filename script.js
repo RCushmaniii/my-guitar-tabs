@@ -102,7 +102,7 @@ document.querySelectorAll('.reveal').forEach(el => io.observe(el));
  * Uses native Web Share API on mobile, clipboard fallback on desktop
  */
 (function initShare() {
-    const shareLinks = document.querySelectorAll('.share-link a');
+    const shareLinks = document.querySelectorAll('.share-button');
     
     shareLinks.forEach(link => {
         link.addEventListener('click', async (e) => {
@@ -123,12 +123,12 @@ document.querySelectorAll('.reveal').forEach(el => io.observe(el));
                     // User cancelled share - don't show error
                     if (err.name !== 'AbortError') {
                         console.log('Share failed:', err);
-                        fallbackShare();
+                        fallbackShare(link);
                     }
                 }
             } else {
                 // Fallback for desktop: copy to clipboard
-                fallbackShare();
+                fallbackShare(link);
             }
         });
     });
@@ -137,27 +137,124 @@ document.querySelectorAll('.reveal').forEach(el => io.observe(el));
      * Fallback share method using Clipboard API
      * Copies URL to clipboard and shows visual feedback
      */
-    function fallbackShare() {
+    function fallbackShare(button) {
         const url = window.location.href;
+        if (!button) return;
         
         // Try to copy to clipboard
         navigator.clipboard.writeText(url).then(() => {
-            // Show success feedback
-            const link = document.querySelector('.share-link a');
-            const originalText = link.innerHTML;
-            
-            // Update button text with checkmark
-            link.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Link copied!';
-            
-            // Restore original text after 2 seconds
+            const originalNodes = Array.from(button.childNodes).map((n) => n.cloneNode(true));
+
+            while (button.firstChild) {
+                button.removeChild(button.firstChild);
+            }
+
+            const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+            svg.setAttribute('width', '16');
+            svg.setAttribute('height', '16');
+            svg.setAttribute('viewBox', '0 0 24 24');
+            svg.setAttribute('fill', 'none');
+            svg.setAttribute('stroke', 'currentColor');
+            svg.setAttribute('stroke-width', '2');
+
+            const polyline = document.createElementNS('http://www.w3.org/2000/svg', 'polyline');
+            polyline.setAttribute('points', '20 6 9 17 4 12');
+            svg.appendChild(polyline);
+
+            button.appendChild(svg);
+            button.appendChild(document.createTextNode(' Link copied!'));
+
             setTimeout(() => {
-                link.innerHTML = originalText;
+                while (button.firstChild) {
+                    button.removeChild(button.firstChild);
+                }
+                for (const n of originalNodes) {
+                    button.appendChild(n);
+                }
             }, 2000);
         }).catch(err => {
             // Clipboard API failed - show alert as last resort
             console.error('Failed to copy:', err);
             alert('Share URL: ' + url);
         });
+    }
+})();
+(function initShellPage() {
+    const shellRoot = document.querySelector('[data-shell]');
+    if (!shellRoot) return;
+
+    const titleEl = document.getElementById('shellTitle');
+    const bodyEl = document.getElementById('shellBody');
+    if (!titleEl || !bodyEl) return;
+
+    const params = new URLSearchParams(window.location.search);
+    const page = (params.get('page') || 'info').toLowerCase();
+
+    const contentByPage = {
+        privacy: {
+            title: 'Privacy',
+            body: [
+                'This is a static portfolio-style landing page. It does not collect form submissions and does not intentionally store personal data in cookies or local storage.',
+                'Payments are handled by PayPal via an external checkout link. Refer to PayPal\'s privacy policy for payment processing details.'
+            ]
+        },
+        terms: {
+            title: 'Terms',
+            body: [
+                'This is a demo storefront experience for a digital download. By purchasing, you agree not to redistribute the files as-is.',
+                'If you have questions about usage or licensing, use the contact option below.'
+            ]
+        },
+        licensing: {
+            title: 'Licensing',
+            body: [
+                'You can use the purchased audio files in your own productions, including commercial releases.',
+                'You may not resell, re-upload, or redistribute the raw files as a standalone product.'
+            ]
+        },
+        downloads: {
+            title: 'Downloads',
+            body: [
+                'After purchase, your download link is delivered to the email address used at checkout.',
+                'If you don\'t see it within a few minutes, check spam/promotions. If it still doesn\'t arrive, contact us and we\'ll help.'
+            ]
+        },
+        contact: {
+            title: 'Contact',
+            body: [
+                'For delivery issues or questions, reach out on Instagram and we\'ll respond as soon as possible.',
+                'This page is intentionally minimal as part of the portfolio/demo site.'
+            ]
+        },
+        blog: {
+            title: 'Blog',
+            body: [
+                'This is a placeholder page for a future blog section.',
+                'In a production version, this would be where educational posts, release notes, and updates live.'
+            ]
+        },
+        info: {
+            title: 'More info',
+            body: [
+                'This page provides supporting content placeholders for a portfolio-style demo site.'
+            ]
+        }
+    };
+
+    const chosen = contentByPage[page] || contentByPage.info;
+
+    titleEl.textContent = chosen.title;
+    document.title = `${chosen.title} | Brian Camacho`;
+
+    while (bodyEl.firstChild) {
+        bodyEl.removeChild(bodyEl.firstChild);
+    }
+
+    for (const paragraph of chosen.body) {
+        const p = document.createElement('p');
+        p.textContent = paragraph;
+        p.style.marginTop = '12px';
+        bodyEl.appendChild(p);
     }
 })();
 

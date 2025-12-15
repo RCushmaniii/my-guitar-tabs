@@ -3,7 +3,7 @@
 [![Live Demo](https://img.shields.io/badge/Live%20Demo-Visit%20Site-brightgreen?style=for-the-badge&logo=vercel)](https://guitar-sample-store.vercel.app/)
 [![Deployment](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com)
 
-A modern, responsive landing page for selling guitar sample packs. Developed by **Robert Cushman** as a portfolio project for student **Brian Camacho** (guitarist and web developer), showcasing clean design, SEO best practices, and modern web development techniques.
+A modern, responsive landing page for selling guitar sample packs. Developed by **Robert Cushman** as a portfolio project for student **Brian Camacho** (guitarist and web developer), showcasing clean design, SEO best practices, accessibility, and performance-focused front-end implementation.
 
 **🌐 Live Site**: [https://guitar-sample-store.vercel.app/](https://guitar-sample-store.vercel.app/)  
 **Last Updated**: November 3, 2025
@@ -13,12 +13,15 @@ A modern, responsive landing page for selling guitar sample packs. Developed by 
 Perfect scores across all metrics on both mobile and desktop!
 
 ### Desktop Performance
+
 ![Desktop PageSpeed Report](images/performance/page_speed_report_desktop.jpg)
 
 ### Mobile Performance
+
 ![Mobile PageSpeed Report](images/performance/page_speed_report_mobile.jpg)
 
 **Achieved:**
+
 - ✅ **100/100** Performance
 - ✅ **100/100** Accessibility
 - ✅ **100/100** Best Practices
@@ -34,6 +37,8 @@ This is a single-page e-commerce landing page for "Sylvester" guitar samples by 
 - **Modern UI/UX** with scroll animations and parallax effects
 - **SEO optimized** with structured data and social meta tags
 - **Dark mode support** (automatic based on system preference)
+- **Trust-building sections** (what's included, delivery expectations, FAQ)
+- **Accessible interactions** (skip link, keyboard-friendly controls)
 
 ## ⚡ Features
 
@@ -53,6 +58,8 @@ This is a single-page e-commerce landing page for "Sylvester" guitar samples by 
 - **Web Share API** integration with clipboard fallback
 - **Structured data (JSON-LD)** for rich search results
 - **Open Graph & Twitter Cards** for social sharing
+- **Preload optimization** for above-the-fold hero image (LCP)
+- **Security headers** configured via `vercel.json`
 
 ### SEO
 
@@ -70,9 +77,12 @@ my-guitar-tabs/
 ├── index.html          # Main landing page
 ├── styles.css          # All styles (responsive, dark mode)
 ├── script.js           # Animations, share functionality
+├── shell.html          # Animated placeholder page for supporting links
+├── privacy.html         # Redirect helper to shell (noindex)
 ├── robots.txt          # Search engine directives
 ├── sitemap.xml         # Site structure for crawlers
 ├── README.md           # This file
+├── LICENSE             # MIT license (open learning repo)
 └── images/             # Product images and assets
 ```
 
@@ -106,6 +116,14 @@ Following core coding principles:
 1. Clone or download the repository
 2. Open `index.html` in a modern browser
 3. No build process required - pure HTML/CSS/JS
+
+### Placeholder / Shell Pages
+
+Footer support links route to `shell.html?page=...` (e.g. `shell.html?page=privacy`). This is intentional for the portfolio/demo version:
+
+- Keeps the main page focused
+- Avoids dead links / `href="#"`
+- Provides an animated, branded "help" surface without needing a full multi-page site
 
 ### Before Going Live
 
@@ -145,7 +163,7 @@ Potential improvements for a production version:
 
 ## 📜 License
 
-This is a student portfolio project. Feel free to use as a reference or template.
+MIT - this is an open learning repo. Feel free to use as a reference or template.
 
 ## 👤 Credits
 
